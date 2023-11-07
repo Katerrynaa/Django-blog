@@ -1,0 +1,53 @@
+<style>
+   .form-container {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+
+.form-body textarea {
+    width: 200%; 
+    max-height: 200px; 
+}
+
+.form-body button {
+    margin-top: 10px;
+}
+
+
+</style>
+
+{% extends 'home.html' %} 
+
+{% load profanity %}
+
+
+{% block content %}
+{% load crispy_forms_tags %}  
+<div class="form-container">
+    <div class="form-content">
+        <h5 class="comm-head">Add your comment</h5>
+        <form method="post" class="form-body">
+            {% csrf_token %}
+            {{ form |crispy }}
+            
+            <button class="btn btn-primary" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+
+{% with string='' %}
+{{ string|censor }}
+{% endwith %}
+
+<ul class="list">
+    <ul>
+        {% for comment in comments %}
+            <li>{{ comment.body }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

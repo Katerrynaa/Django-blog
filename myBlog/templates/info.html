@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Blog page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimal-ui">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+<style>
+
+
+    .btn-primary {
+        margin-top: 10px;
+        margin-left: 210px;
+    }
+
+    .values-header {
+        margin-top: 80px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .text-container {
+        width: 70%; 
+        margin: 0 auto; 
+        padding: 20px;
+  
+    }
+
+    .card-text {
+        width: 75%;
+        margin: 0 auto;
+        padding: 20px;
+        margin-top: 80px;
+    }
+
+    
+
+
+</style>
+
+    {% extends 'home.html' %}
+
+    {% block content %}
+          <p class="card-text">Hello everyone,
+           I'm thrilled to introduce you to our brand new blogging platform! 
+           This project was born out of a passion for sharing ideas and knowledge, and our aim is to provide a welcoming space for individuals 
+           from all walks of life to publish their thoughts, insights, and stories. We firmly believe that every person's perspective is unique and valuable, and we want to offer you a platform where you can express yourself freely.
+           Our blog is open to everyone who has something meaningful to contribute. Whether you're a subject matter expert, an aspiring writer, or someone with a personal story to share, we encourage you to join us in this exciting venture. 
+           Your contributions will not only give you the opportunity to voice your ideas but also to engage with a diverse and global audience.
+           We understand the power of storytelling and the importance of knowledge exchange. That's why we've made the process of submitting your posts as easy as possible. 
+           All you need to do is create an account, log in, and start sharing your articles with the world. We believe that through your contributions, we can create a community that is richer in insights, experiences, and perspectives.
+           So, go ahead, explore the blog, read the fantastic posts already published, and, most importantly, don't hesitate to hit the 'Create Post' button to share your own stories, thoughts, and expertise. 
+           Together, we can transform this blog into a hub of learning, inspiration, and connection.
+           In this spirit of collaboration, we encourage discussions, debates, and constructive feedback. 
+           Every voice matters, and every viewpoint contributes to the richness of our collective knowledge.
+           Thank you for joining our blogging community. We are eager to read your posts, learn from your experiences, 
+           and grow together as a global community of thinkers, writers, and readers.
+           Happy blogging!.</p>
+           <a href="{% url 'new_article_form' %}" class="btn btn-primary">Create</a>
+
+
+    <h3 class="values-header">Our values</h3>
+
+    <div class="text-container">
+              <h5 class="text-title">Exchange of ideas</h5>
+              <p class="main-text">The community on your blog is created by a variety of contributors and their opinions. 
+                It's a place where people can share ideas, learn from each other and create valuable discussions.
+                This community becomes a place where different people can exchange ideas, experiences and views, 
+                and it becomes a source of invaluable acquaintances and collaborations.</p>
+            
+              <h5 class="text-title">Variety of content</h5>
+              <p class="main-text">With diverse authors comes diverse content. Your blog can contain articles on different topics 
+                and from different points of view. This attracts a different type of audience with different interests,
+                 making your blog more appealing to a wider range of readers.
+                 With different authors, your blog can cover a wide range of topics and views. 
+                 This means that readers will be able to find content.</p>
+    
+              <h5 class="text-title">Opportunities for cooperation</h5>
+              <p class="main-text">the possibility of collaboration between different authors can lead to the creation of new products, 
+                services or initiatives that are in demand in our community. 
+                Cooperation between experts from different fields can lead to the creation of expert groups or committees to solve specific tasks. 
+                This contributes to the development of deep initiatives.</p>
+            </div>
+
+            {% endblock %}
